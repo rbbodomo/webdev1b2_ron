@@ -26,11 +26,15 @@ if (confirm('Press a button')){
     console.log('You pressed cancel');
 }
 
-console.log('end');
+console.log('end #1');
 
 var person = prompt('Please enter your name: ');
 if (person == 'Carlos') {
     alert("Welcome to my site, " + person);
 } else {
     alert('Only Alixandria can enter here!');
+}
+
+for (var counter2 = 0; counter2 < 10; counter2++){
+    console.log('github change counter2', counter2);
 }
