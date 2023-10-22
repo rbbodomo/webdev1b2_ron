@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW 5: Phonebook</title>
+    <!-- added quick styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      p {
+        font-weight: bold;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 p-4">
+    <div class="max-w-md mx-auto p-4 bg-white rounded shadow-md">
+      <h1 class="text-2xl font-bold text-center mb-4">The Basic Phonebook</h1>
+      <label for="userName" class="text-sm font-medium">Name: </label>
+      <input
+        type="text"
+        name="userName"
+        id="userName"
+        class="w-full p-2 mt-1 border rounded"
+      />
+      <label for="userNumber" class="text-sm font-medium">Number: </label>
+      <input
+        type="text"
+        name="userNumber"
+        id="userNumber"
+        class="w-full p-2 mt-1 border rounded"
+      />
+      <div class="flex items-center justify-center">
+        <button
+          onclick="submitContact()"
+          class="bg-gray-500 text-white px-4 py-2 rounded mt-4 mr-2 hover:bg-gray-200 hover:text-black"
+        >
+          Add
+        </button>
+        <button
+          onclick="viewContacts()"
+          class="bg-gray-500 text-white px-4 py-2 rounded mt-4 ml-2 hover:bg-gray-200 hover:text-black"
+        >
+          View All
+        </button>
+      </div>
+      <div id="contactDiv" class="mt-4 flex flex-col items-center"></div>
+    </div>
+  </body>
+  <script src="scripts/jsday5.js"></script>
+</html>
