@@ -1,0 +1,14 @@
+h1 {
+    color: rgb(15 23 42); /* Change the text color to blue */
+    font-size: 22px !important; /* Change the font size to 24 pixels */
+    font-weight: bold !important; /* Make the text bold */
+}
+    
+p {
+    font-weight: bold;
+    font-size: 20px;
+    color: #e1e1e1;
+    margin-bottom: 10px;
+}
+
+

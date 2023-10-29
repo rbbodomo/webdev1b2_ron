@@ -1,6 +1,6 @@
 var phoneBook = [];
 
-// for bonus
+// bonus
 function showContacts(phoneBook) {
     const myNodeList = document.querySelectorAll("p");
     for (let i = 0; i < myNodeList.length; i++) {

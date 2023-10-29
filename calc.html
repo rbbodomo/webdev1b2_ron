@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/calc.css" />
+  </head>
+  <body class="bg-gray-500">
+    <div class="h-screen flex flex-col items-center justify-center">
+      <div class="bg-slate-900 shadow-lg rounded-lg p-4">
+        <div class="flex items-center justify-between mb-3">
+          <input
+            type="text"
+            name="numInput"
+            id="numInput"
+            value="0"
+            class="bg-gray-100 w-full h-[60px] p-2 mt-1 mb-3 border rounded text-right text-2xl font-medium text-overflow: ellipsis focus:outline-none focus:ring-0 focus:border-[#6384a4] border-2"
+          />
+        </div>
+        <div class="flex items-center justify-evenly mb-3">
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="clearVal()"
+          >
+            AC
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="posNeg()"
+          >
+            +/-
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="percent()"
+          >
+            %
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal('/', numInput)"
+          >
+            /
+          </button>
+        </div>
+        <div class="flex items-center justify-evenly mb-3">
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal(7, numInput)"
+          >
+            7
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal(8, numInput)"
+          >
+            8
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal(9, numInput)"
+          >
+            9
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal('X', numInput)"
+          >
+            X
+          </button>
+        </div>
+        <div class="flex items-center justify-evenly mb-3">
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal(4, numInput)"
+          >
+            4
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal(5, numInput)"
+          >
+            5
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal(6, numInput)"
+          >
+            6
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal('-', numInput)"
+          >
+            -
+          </button>
+        </div>
+        <div class="flex items-center justify-evenly mb-3">
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal(1, numInput)"
+          >
+            1
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal(2, numInput)"
+          >
+            2
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal(3, numInput)"
+          >
+            3
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal('+', numInput)"
+          >
+            +
+          </button>
+        </div>
+        <div class="flex items-center justify-evenly mb-3">
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[134px] h-[40px] px-12 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal(0, numInput)"
+          >
+            0
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="inputVal('.', numInput)"
+          >
+            .
+          </button>
+          <button
+            class="bg-gray-700 border-[3px] rounded-xl mr-1 ml-1 text-white w-[60px] h-[40px] px-4 text-lg hover:bg-[#6384a4]"
+            onclick="equalVal()"
+          >
+            =
+          </button>
+        </div>
+      </div>
+      <div id="recentDiv" class="mt-4 flex flex-col items-center">
+        <h1>Recent Calculations:</h1>
+      </div>
+      <!-- <p>Recent Calculation:</p>
+      <p>Recent Calculation 2</p>
+      <p>Recent Calculation 3</p> -->
+    </div>
+  </body>
+  <script src="scripts/calc.js"></script>
+</html>
