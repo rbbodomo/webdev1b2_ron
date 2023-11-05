@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <link rel="stylesheet" href="styles/capstone.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#f2f5fa] dark:bg-[#323234]">
+    <header
+      class="left-1/2 right-1/2 transform -translate-x-1/2 fixed z-50 opacity-80 bg-gray-800 dark:bg-[#b2d0da] text-white text-sm pt-1 pb-1 w-1/2 max-[415px]:w-3/4 mt-2 rounded-lg"
+    >
+      <nav class="flex justify-around dark:text-black">
+        <a
+          class="hover:font-bold transition duration-300 max-[380px]:pr-2 max-[380px]:pl-2"
+          href="#home"
+          >Home</a
+        >
+        <a
+          class="hover:font-bold transition duration-300 max-[380px]:pr-2 max-[380px]:pl-2"
+          href="#about"
+          >About</a
+        >
+        <a
+          class="hover:font-bold transition duration-300 max-[380px]:pr-2 max-[380px]:pl-2"
+          href="#projects"
+          >Projects</a
+        >
+        <a
+          class="hover:font-bold transition duration-300 max-[380px]:pr-2 max-[380px]:pl-2"
+          href="#contact"
+          >Contact</a
+        >
+      </nav>
+    </header>
+    <main class="text-center p-4">
+      <section
+        id="home"
+        class="bg-image-light mt-[-4rem] mr-[-1rem] ml-[-1rem] h-screen flex flex-col justify-center items-center"
+      >
+        <h1
+          id="typewriter"
+          class="text-4xl font-bold mb-8 max-[380px]:pt-32"
+        ></h1>
+        <div id="photo" class="mb-4 slide-up">
+          <img
+            src="images\cap_id_pic.jpg"
+            alt="My Photo"
+            class="w-48 h-48 rounded-full"
+          />
+        </div>
+        <p class="text-2xl max-w-[1100px] fade-in-up dark:text-white">
+          Hi &#128075; As part of my capstone project for a basic web
+          development bootcamp, I turned my resume into a website! As a bonus,
+          you may check my small projects below.
+        </p>
+        <div
+          class="mt-4 flex flex-row space-x-4 bg-[#223a49] dark:bg-[#b2d0da] opacity-95 p-4 items-center rounded-lg shadow-lg slide-up"
+        >
+          <a
+            class="text-white dark:text-black mr-2 hover:text-lg transition duration-300"
+            href="mailto:ronbrianbodomo@gmail.com"
+            >Contact Me
+          </a>
+          <p class="text-white dark:text-black">OR</p>
+          <a
+            class="text-white dark:text-black hover:text-lg transition duration-300"
+            href="Resume_Ron_Brian_Bodomo_2.pdf"
+            download="resume"
+            >Download my Resume
+          </a>
+          <a
+            href="https://github.com/rbbodomo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              class="fab fa-github text-4xl text-white dark:text-black hover:text-gray-400 transition duration-300"
+            ></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ron-brian-bodomo-07b1b624b"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              class="fab fa-linkedin text-4xl text-white dark:text-black hover:text-blue-500 transition duration-300"
+            ></i>
+          </a>
+        </div>
+        <!-- Dark Mode Switch-->
+        <div class="justify-center p-4">
+          <div class="inline-flex items-center">
+            <div
+              class="relative inline-block h-4 w-8 cursor-pointer rounded-full"
+            >
+              <input
+                id="switch-component"
+                type="checkbox"
+                class="peer absolute h-4 w-8 -translate-x-2/4 cursor-pointer appearance-none rounded-full bg-gray-800 transition-colors duration-300 checked:bg-[#b2d0da] peer-checked:border-[#b2d0da] peer-checked:before:bg-[#b2d0da]"
+              />
+              <label
+                for="switch-component"
+                class="before:content[''] absolute top-2/4 -left-1 h-5 w-5 -translate-y-2/4 cursor-pointer rounded-full border border-blue-gray-800 bg-white shadow-md transition-all duration-300 before:absolute before:top-2/4 before:left-2/4 before:block before:h-10 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-800 before:opacity-0 before:transition-opacity hover:before:opacity-10 peer-checked:translate-x-full peer-checked:border-blue-500 peer-checked:before:bg-blue-500"
+              >
+                <div
+                  class="top-2/4 left-2/4 inline-block -translate-x-2/4 -translate-y-2/4 rounded-full p-5"
+                  data-ripple-dark="true"
+                ></div>
+              </label>
+            </div>
+          </div>
+          <p class="dark:text-white pt-2">Click for some magic!</p>
+        </div>
+      </section>
+      <section id="about" class="py-8">
+        <!-- tabs component from material UI -->
+        <div class="w-2/3 mr-auto ml-auto mt-4">
+          <div class="relative right-0">
+            <ul
+              id="tab_comp"
+              class="relative flex rounded-xl bg-[#b2d0da] p-1"
+              data-tabs="tabs"
+              role="list"
+            >
+              <li class="z-30 flex-auto text-center">
+                <a
+                  class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+                  data-tab-target=""
+                  active=""
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="educ"
+                >
+                  <span class="ml-1 font-bold">Educational Attainment</span>
+                </a>
+              </li>
+              <li class="z-30 flex-auto text-center">
+                <a
+                  class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+                  data-tab-target=""
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="work"
+                >
+                  <span class="ml-1 font-bold">Work Experience</span>
+                </a>
+              </li>
+              <li class="z-30 flex-auto text-center">
+                <a
+                  class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+                  data-tab-target=""
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="cocurricular"
+                >
+                  <span class="ml-1 font-bold">Co-curricular Activities</span>
+                </a>
+              </li>
+              <li class="z-30 flex-auto text-center">
+                <a
+                  class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+                  data-tab-target=""
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="skills"
+                >
+                  <span class="ml-1 font-bold">Skills and Attributes</span>
+                </a>
+              </li>
+            </ul>
+            <div data-tab-content="" class="p-5">
+              <div
+                class="block opacity-100 block text-base font-light leading-relaxed text-inherit text-blue-gray-500 antialiased tabs"
+                id="educ"
+                role="tabpanel"
+              >
+                <ul class="text-left dark:text-white">
+                  <li class="font-bold">
+                    College of Engineering University of the Philippines –
+                    Diliman (August 2019 - 2023)
+                  </li>
+                  <ul class="list-disc pl-8">
+                    <li>Bachelor of Science in Electronics Engineering</li>
+                    <li>
+                      Magna Cum Laude (Graduation AY 2022-2023; GWA: 1.2212)
+                    </li>
+                    <li>University Scholar (AY 2020-2022)</li>
+                    <li>Consistent DOST Merit Scholar (AY 2019-2023)</li>
+                    <li>
+                      Analog Devices Microelectronics and Microprocessors
+                      Laboratory Affiliate, undergraduate thesis project: 10-bit
+                      Low Power SAR ADC with 2-stage Dynamic Latched Comparator
+                      and Split-monotonic Capacitive DAC for MEMS Sensor Readout
+                      (Sept 2022-July 2023)
+                    </li>
+                  </ul>
+                  <li class="font-bold">
+                    First City Providential College, San Jose Del Monte City,
+                    Bulacan (2013-2019)
+                  </li>
+                  <ul class="list-disc pl-8">
+                    <li>Rank 4 of the batch (Junior Highschool)</li>
+                    <li>Graduated with Highest Honors (Senior Highschool)</li>
+                    <li>Consistent Member of STEM Club</li>
+                  </ul>
+                </ul>
+
+                <h2 class="font-bold text-left pt-4 dark:text-white">
+                  Certifications
+                </h2>
+                <ul class="text-left pl-4 dark:text-white">
+                  <li class="font-bold">
+                    University of Helsinki, Finland, (September 2023)
+                  </li>
+                  <ul class="list-disc pl-4">
+                    <li>Java Programming I</li>
+                    <li>
+                      Open online course offered by Department of Computer
+                      Science in University of Helsinki
+                    </li>
+                    <li>
+                      Covered the basics of java, object-oriented programming,
+                      and unit testing using JUnit
+                    </li>
+                    <li>
+                      Certificate link
+                      <a
+                        href="https://certificates.mooc.fi/validate/vqd1pjc6psd"
+                        target="_blank"
+                        class="font-bold text-[#223a49] dark:text-[#b2d0da]"
+                        >here!</a
+                      >
+                    </li>
+                  </ul>
+                  <li class="font-bold">Free Code Camp (September 2023)</li>
+                  <ul class="list-disc pl-4">
+                    <li>Responsive Web Design</li>
+                    <li>Used HTML5 and CSS to create basic sample webpages</li>
+                    <li>
+                      Certificate link
+                      <a
+                        href="https://www.freecodecamp.org/certification/fcc8ecac83d-481b-436f-9eb3-1c7b1aea5ae3/responsive-web-design"
+                        target="_blank"
+                        class="font-bold text-[#223a49] dark:text-[#b2d0da]"
+                        >here!</a
+                      >
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="hidden opacity-0 tabs" id="work" role="tabpanel">
+                <p class="font-bold text-left dark:text-white">
+                  STANDARDS REVIEW CENTER (SRC) – Student Facilitator
+                  (April-July 2019)
+                </p>
+                <ul class="list-disc pl-4 text-left dark:text-white">
+                  <li>
+                    Managed over 50 students’ college exam review progress
+                    through attendance, exams, and database updates for
+                    monitoring
+                  </li>
+                  <li>
+                    Assisted 5 instructors for smooth operation of review
+                    classes by organizing the delivery of study materials
+                  </li>
+                  <li>
+                    Proctored the final mock exam with over 100+ students and
+                    collaborated with a team to ensure fair evaluation of scores
+                    and rankings
+                  </li>
+                </ul>
+
+                <p class="font-bold text-left dark:text-white">
+                  MBOX SMART LOCKER CORPORATION – Engineering/IT Intern (Jun-Aug
+                  2022)
+                </p>
+                <ul class="list-disc pl-4 text-left dark:text-white">
+                  <li>
+                    Revised 5 major sections of the company’s operation website
+                    through Javascript and ReactJS for frontend development and
+                    GraphQL for database synchronization
+                  </li>
+                  <li>
+                    Utilized GitHub integrated to VSCode for version control and
+                    organized collaboration with colleagues and supervisors
+                  </li>
+                  <li>
+                    Configured 4 Network Video Recorder (NVR) Cameras and 4 RJ45
+                    Ethernet Cables ready to be used in future smart locker
+                    installations
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="hidden opacity-0 tabs"
+                id="cocurricular"
+                role="tabpanel"
+              >
+                <p class="font-bold text-left dark:text-white">
+                  UP Engineering Radio Guild
+                </p>
+                <p class="font-bold text-left dark:text-white">
+                  DOCUMENTATIONS HEAD FOR SYNERGY 2022 (Dec 2021 – May 2022)
+                </p>
+                <ul class="list-disc pl-4 text-left dark:text-white">
+                  <li>
+                    Led a 5-person documentation team to support the events’
+                    secretariat and write-up needs. Facilitated and participated
+                    with the delivery of marketing, publicity, and event
+                    operation requests, specifically 2 event primers, 8 event
+                    narratives, 12 evaluation forms, 50 captions for Facebook
+                    posts/Twitter live tweets, and noted minutes during formal
+                    meetings
+                  </li>
+                  <li>
+                    Implemented project management techniques and lead internal
+                    team meetings for 100% on-time delivery of outputs
+                  </li>
+                </ul>
+
+                <p class="font-bold text-left dark:text-white">
+                  Huawei Information and Communication Technologies (ICT)
+                  Academy
+                </p>
+                <p class="font-bold text-left dark:text-white">
+                  PARTICIPANT FOR HUAWEI ICT COMPETITION 2022-2023
+                </p>
+                <ul class="list-disc pl-4 text-left dark:text-white">
+                  <li>
+                    Part of the University of the Philippines Diliman
+                    representative team for the Network Track (Security,
+                    Datacom, WLAN, Routing and Switching)
+                  </li>
+                  <li>
+                    Finished 5th out of 23 participating universities across the
+                    country
+                  </li>
+                </ul>
+              </div>
+              <div class="hidden opacity-0 tabs" id="skills" role="tabpanel">
+                <ul class="pl-4 text-left dark:text-white">
+                  <li class="font-bold">
+                    Good Verbal and Written Communication
+                    <ul class="list-disc pl-8 text-left font-normal">
+                      <li>Native Filipino</li>
+                      <li>Fluent English</li>
+                      <li>Basic Japanese</li>
+                    </ul>
+                  </li>
+                  <li class="font-bold">
+                    Basic to Intermediate Level Programming
+                    <ul class="list-disc pl-8 text-left font-normal">
+                      <li>HTML, CSS, Javascript</li>
+                      <li>Python, C++, MATLAB</li>
+                      <li>Java, SQL</li>
+                    </ul>
+                  </li>
+                  <li class="font-bold">
+                    Computer Literacy
+                    <ul class="list-disc pl-8 text-left font-normal">
+                      <li>MS Office</li>
+                      <li>Google Suite</li>
+                      <li>Canva Pro, Adobe Lightroom/Photoshop</li>
+                    </ul>
+                  </li>
+                  <li class="font-bold">
+                    Electronics Engineering
+                    <ul class="list-disc pl-8 text-left font-normal">
+                      <li>Basic knowledge in Computer Networks</li>
+                      <li>
+                        Basic knowledge in Analog Circuit Design (Cadence,
+                        VerilogA, Microfabrication)
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="font-bold">
+                    Attributes
+                    <ul class="list-disc pl-8 text-left font-normal">
+                      <li>
+                        Motivated and willing to learn, Flexible and can adapt
+                        to new applications/technology fast
+                      </li>
+                      <li>
+                        Collaborative and able to work in teams but can be
+                        independent in handling tasks if needed
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="py-8">
+        <h2
+          class="mt-8 text-4xl font-bold mb-16 text-[#223a49] dark:text-[#b2d0da]"
+        >
+          My Small Projects
+        </h2>
+        <!-- Add more project thumbnails as needed -->
+        <div id="cards" class="flex flex-wrap justify-center">
+          <div
+            class="relative flex flex-col text-gray-700 bg-white ml-4 justify-center w-96 rounded-xl bg-clip-border"
+          >
+            <div
+              class="relative h-64 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40"
+            >
+              <img
+                src="images/calc.png"
+                alt="img-blur-shadow"
+                layout="fill"
+                class="object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h5
+                class="block mb-2 text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900"
+              >
+                Basic Calculator
+              </h5>
+              <p
+                class="block font-sans text-base antialiased font-light leading-relaxed text-inherit"
+              >
+                A simple calculator that has the basic 4 operations compatible
+                with decimal numbers. The additional functionalities include
+                percentage and positive-to-negative buttons.
+              </p>
+              <p
+                class="block font-sans text-base antialiased font-semibold leading-relaxed text-inherit"
+              >
+                Tech Stack: HTML, Tailwind CSS, Vanilla JS
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <a
+                href="https://github.com/rbbodomo/webdev1b2_ron/pull/7/files"
+                target="_blank"
+              >
+                <button
+                  class="select-none rounded-lg bg-[#223a49] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-[#b2d0da] focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Check Code
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="relative flex flex-col text-gray-700 bg-white ml-4 max-[831px]:mt-8 justify-center w-96 rounded-xl bg-clip-border"
+          >
+            <div
+              class="relative h-64 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40"
+            >
+              <img
+                src="images/phonebook.png"
+                alt="img-blur-shadow"
+                layout="fill"
+                class="object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h5
+                class="block mb-2 text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900"
+              >
+                Basic Phonebook
+              </h5>
+              <p
+                class="block font-sans text-base antialiased font-light leading-relaxed text-inherit"
+              >
+                A simple phonebook that can add new contacts and show all
+                records.
+              </p>
+              <br />
+              <br />
+              <p
+                class="block font-sans text-base antialiased font-semibold leading-relaxed text-inherit"
+              >
+                Tech Stack: HTML, Tailwind CSS, Vanilla JS
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <a
+                href="https://github.com/rbbodomo/webdev1b2_ron/pull/6/files"
+                target="_blank"
+              >
+                <button
+                  class="select-none rounded-lg bg-[#223a49] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-[#b2d0da] focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Check Code
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="relative flex flex-col text-gray-700 bg-white ml-4 max-[1231px]:mt-8 justify-center w-96 rounded-xl bg-clip-border"
+          >
+            <div
+              class="relative h-64 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40"
+            >
+              <img
+                src="images/land_page.png"
+                alt="img-blur-shadow"
+                layout="fill"
+                class="object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h5
+                class="block mb-2 text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900"
+              >
+                Landing Page
+              </h5>
+              <p
+                class="block font-sans text-base antialiased font-light leading-relaxed text-inherit"
+              >
+                A simple landing page for an imaginary ornamental plant business
+                with embedded video and product card.
+              </p>
+              <br />
+              <p
+                class="block font-sans text-base antialiased font-semibold leading-relaxed text-inherit"
+              >
+                Tech Stack: HTML, CSS
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <button
+                class="select-none rounded-lg bg-[#223a49] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-[#b2d0da] focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button"
+                data-ripple-light="true"
+                data-popover-target="popover"
+              >
+                Check Code
+              </button>
+              <div
+                data-popover="popover"
+                class="absolute w-max whitespace-normal break-words rounded-lg border border-blue-gray-50 bg-white p-4 text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none"
+              >
+                Code not available, sorry!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="py-8">
+        <h2 class="text-4xl font-bold mb-4 text-[#223a49] dark:text-[#b2d0da]">
+          Contact Me
+        </h2>
+        <p class="dark:text-white">
+          Send me an email through
+          <a
+            href="mailto:ronbrianbodomo@gmail.com"
+            class="text-[#223a49] dark:text-[#b2d0da] font-bold"
+            >ronbrianbodomo@gmail.com</a
+          >
+          or just answer the form below!
+        </p>
+        <form action="mail.php" method="POST">
+          <label for="name" class="block mt-4 dark:text-white">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="w-3/4 border rounded px-3 py-2"
+          />
+
+          <label for="email" class="block mt-4 dark:text-white"
+            >Email Address:</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-3/4 border rounded px-3 py-2"
+          />
+
+          <label for="subject" class="block mt-4 dark:text-white"
+            >Subject:</label
+          >
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            class="w-3/4 border rounded px-3 py-2"
+          />
+
+          <label for="message" class="block mt-4 dark:text-white"
+            >Message:</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="w-3/4 border rounded px-3 py-2"
+          ></textarea>
+          <br />
+          <button
+            type="submit"
+            class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            data-popover-target="popover_contact"
+          >
+            Send
+          </button>
+          <div
+            data-popover="popover_contact"
+            class="absolute w-1/2 whitespace-normal break-words rounded-lg border border-blue-gray-50 bg-white p-4 text-md font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none"
+          >
+            Note: The form is just a sample. You can connect with me directly
+            through the email provided!
+          </div>
+        </form>
+        <p
+          class="text-sm text-[#223a49] dark:text-[#b2d0da] font-awesome italic mt-4"
+        >
+          Note: The form is just a sample. You can connect with me directly
+          through the email provided above!
+        </p>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4">
+      &copy; 2023 Capstone Portfolio - Bodomo |
+      <a href="#" id="termsLink">Terms and Conditions</a>
+    </footer>
+
+    <!-- Modal Container -->
+    <div id="termsModal" class="modal">
+      <div class="modal-content rounded-lg shadow-blue-gray-500">
+        <span class="close text-[#223a49]" id="closeModal">&times; Close</span>
+        <!-- Include your terms and conditions content here -->
+        <p class="italic">Note: Just a sample terms and condition popup!</p>
+        <h3 class="font-semibold">Website Terms and Conditions</h3>
+
+        <p>Last updated: [Date]</p>
+
+        <p>
+          Please read these terms and conditions carefully before using Our
+          Website.
+        </p>
+
+        <h4 class="font-semibold">Use of the Website</h4>
+        <p>
+          By accessing this Website, You agreed to be bound by these Terms and
+          Conditions. If You disagree with any of these terms, You are
+          prohibited from using or accessing this Website. The materials
+          contained in this Website are protected by applicable copyright and
+          trademark law.
+        </p>
+
+        <h4 class="font-semibold">Termination</h4>
+        <p>
+          We may terminate or suspend Your Account immediately, without prior
+          notice or liability, for any reason whatsoever, including without
+          limitation if You breach these Terms and Conditions.
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/capstone.js"></script>
+  <!-- material ui scripts -->
+  <!-- from cdn -->
+  <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/tabs.js"></script>
+  <!-- from cdn -->
+  <script
+    type="module"
+    src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"
+  ></script>
+</html>
